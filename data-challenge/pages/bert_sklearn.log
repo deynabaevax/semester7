@@ -1,0 +1,32 @@
+01/15/2023 16:15:52 - INFO - root -   Loading model:
+BertClassifier(bert_config_json={'architectures': ['BertForMaskedLM'],
+                                 'attention_probs_dropout_prob': 0.1,
+                                 'hidden_act': 'gelu',
+                                 'hidden_dropout_prob': 0.1, 'hidden_size': 768,
+                                 'initializer_range': 0.02,
+                                 'intermediate_size': 3072,
+                                 'layer_norm_eps': 1e-12,
+                                 'max_position_embeddings': 512,
+                                 'model_type': 'bert',
+                                 'num_attention_heads': 12,
+                                 'num_hidden_layers': 12, 'pad_token_...
+                                       ('[unused15]', 16), ('[unused16]', 17),
+                                       ('[unused17]', 18), ('[unused18]', 19),
+                                       ('[unused19]', 20), ('[unused20]', 21),
+                                       ('[unused21]', 22), ('[unused22]', 23),
+                                       ('[unused23]', 24), ('[unused24]', 25),
+                                       ('[unused25]', 26), ('[unused26]', 27),
+                                       ('[unused27]', 28), ('[unused28]', 29), ...]),
+               do_lower_case=True, epochs=11,
+               label_list=array([0, 1, 2, 3, 4, 5, 6], dtype=int64),
+               validation_fraction=0.05)
+01/15/2023 16:18:55 - INFO - sentence_transformers.SentenceTransformer -   Load pretrained SentenceTransformer: bert-base-nli-mean-tokens
+01/15/2023 16:18:56 - INFO - sentence_transformers.SentenceTransformer -   Use pytorch device: cpu
+01/15/2023 16:25:07 - INFO - sentence_transformers.SentenceTransformer -   Load pretrained SentenceTransformer: bert-base-nli-mean-tokens
+01/15/2023 16:25:08 - INFO - sentence_transformers.SentenceTransformer -   Use pytorch device: cpu
+01/15/2023 16:25:32 - INFO - sentence_transformers.SentenceTransformer -   Load pretrained SentenceTransformer: bert-base-nli-mean-tokens
+01/15/2023 16:25:33 - INFO - sentence_transformers.SentenceTransformer -   Use pytorch device: cpu
+01/15/2023 16:25:42 - INFO - sentence_transformers.SentenceTransformer -   Load pretrained SentenceTransformer: bert-base-nli-mean-tokens
+01/15/2023 16:25:43 - INFO - sentence_transformers.SentenceTransformer -   Use pytorch device: cpu
+01/15/2023 16:26:48 - INFO - sentence_transformers.SentenceTransformer -   Load pretrained SentenceTransformer: bert-base-nli-mean-tokens
+01/15/2023 16:26:48 - INFO - sentence_transformers.SentenceTransformer -   Use pytorch device: cpu
