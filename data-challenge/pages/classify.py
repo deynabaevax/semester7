@@ -1,6 +1,7 @@
 from bert_sklearn import (BertClassifier,
                           load_model)
 from textblob import TextBlob
+import time
 
 import streamlit as st
 import pandas as pd
@@ -11,11 +12,6 @@ import warnings
 import time
 
 warnings.filterwarnings('ignore')
-
-
-'''
-st.balloons
-'''
 
 
 def classify():
@@ -30,12 +26,16 @@ def classify():
 
     text = st.text_input("Enter your text:")
     if st.button('Predict'):
-        model = load_model("../model/data_challenge_model.bin")
-        predictions = model.predict([text])
-        emotion = predictions[0]
-        emotion_label = {0: 'anger', 1: 'neutral', 2: 'fear',
-                         3: 'sadness', 4: 'joy', 5: 'disgust', 6: 'surprise'}
-        label = emotion_label[emotion]
-        st.success("Your predicted sentiment is: " + label)
-        if label == 'joy' or label == 'surprise':
-            st.balloons()
+        with st.spinner("Hold on tight! You're almost there..."):
+            model = load_model("../model/data_challenge_model.bin")
+            predictions = model.predict([text])
+            emotion = predictions[0]
+            emotion_label = {0: 'anger', 1: 'neutral', 2: 'fear',
+                             3: 'sadness', 4: 'joy', 5: 'disgust', 6: 'surprise'}
+            label = emotion_label[emotion]
+            st.success("Your predicted sentiment is: " + label)
+            if label == 'joy' or label == 'surprise':
+                st.balloons()
+
+# huh, yesterday rained so much!
+# I am so surprised that it rained this morning
