@@ -23,6 +23,7 @@ def recommend_episodes():
     global input
     form = st.form(key='nlpForm')
     input = form.text_area('Enter your text here:')
+    input = input.reshape(-1, 1)
 
     global emotion
     emotion = st.text_input('Emotion', 'enter your emotion here')
@@ -42,8 +43,8 @@ def recommend_episodes():
         sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')
         predicted_episode = functions.process_bert_similarity(
             sbert_model, input, doc)
-        show = functions.output(predicted_episode)
-        st.write(f'Recommended Episode specially for you', predicted_episode)
+        # show = functions.output(predicted_episode)
+        st.write(f'Recommended Episode specially for you: {predicted_episode}')
 
         st.markdown("[![Foo](https://play-lh.googleusercontent.com/TBRwjS_qfJCSj1m7zZB93FnpJM5fSpMA_wUlFDLxWAb45T9RmwBvQd5cWR5viJJOhkI=s48-rw)](https://www.netflix.com/)")
         st.markdown("[![Foo](https://reviewed-com-res.cloudinary.com/image/fetch/s--87edWEK1--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_100/https://reviewed-production.s3.amazonaws.com/1591287416567/Hulu_Logo.jpg)](https://www.hulu.com/)")
