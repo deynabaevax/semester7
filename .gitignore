@@ -1,3 +1,7 @@
 
 *.pyc
 *.bin
+*.csv
+*.txt
+*.jpg
+*.h5
